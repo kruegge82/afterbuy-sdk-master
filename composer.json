@@ -16,6 +16,7 @@
         "jms/serializer": "*",
         "monolog/monolog": "*"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-0": { "Ns\\Afterbuy\\": "src/" }
     }
