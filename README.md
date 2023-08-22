@@ -3,7 +3,7 @@ Installation
 
 Require the bundle and its dependencies with composer:
 
-    $ composer require next-sentence/afterbuy-sdk
+    $ composer require kruegge82/afterbuy-sdk
  
 Usage
 ----------------------------------------------------------------
@@ -40,8 +40,3 @@ Dependencies
 * `jms/serializer` - Allows you to easily serialize, and deserialize data of any complexity
 * `guzzlehttp/guzzle` - Guzzle is a PHP HTTP client library
 * `monolog/monolog` - Monolog lib
-
-
-> Please support - [https://paypal.me/nextsentence](https://paypal.me/nextsentence) :)
-
-
