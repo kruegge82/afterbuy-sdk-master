@@ -12,9 +12,9 @@
     ],
     "require": {
         "php": ">=7.4.0",
-        "guzzlehttp/guzzle": "*",
-        "jms/serializer": "*",
-        "monolog/monolog": "*"
+        "guzzlehttp/guzzle": "^7.7",
+        "jms/serializer": "^3.27",
+        "monolog/monolog": "^2.9"
     },
     "minimum-stability": "dev",
     "autoload": {
