@@ -84,7 +84,7 @@ class Request implements LoggerAwareInterface
      * @param string $errorLanguage
      * @param string $doctypeWhitelist
      */
-    public function __construct($userId, $userPassword, $partnerId, $partnerPassword, $errorLanguage, $doctypeWhitelist)
+    public function __construct($userId, $userPassword, $partnerId, $partnerPassword, $errorLanguage, $doctypeWhitelist=array())
     {
         //AnnotationRegistry::registerLoader('class_exists');
 
@@ -97,8 +97,8 @@ class Request implements LoggerAwareInterface
         if ($doctypeWhitelist) {
             $namingStrategy = new SerializedNameAnnotationStrategy(new CamelCaseNamingStrategy());
             $xmlSerVisitor = new XmlSerializationVisitor($namingStrategy);
-            $xmlDesVisitor = new XmlDeserializationVisitor($namingStrategy);
-            $xmlDesVisitor->setDoctypeWhitelist($doctypeWhitelist);
+            $xmlDesVisitor = new XmlDeserializationVisitor($namingStrategy, $doctypeWhitelist);
+            //$xmlDesVisitor->setDoctypeWhitelist($doctypeWhitelist);
             $builder->setSerializationVisitor('xml', $xmlSerVisitor)
                 ->setDeserializationVisitor('xml', $xmlDesVisitor);
         }

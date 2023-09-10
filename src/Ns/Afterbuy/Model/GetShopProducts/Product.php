@@ -505,6 +505,20 @@ class Product extends AbstractModel
     protected $manufacturerPartNumber;
 
     /**
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("CountryOfOrigin")
+     * @var string
+     */
+    protected $countryOfOrigin;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("CustomsTariffNumber")
+     * @var string
+     */
+    protected $customsTariffNumber;
+
+    /**
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("Condition")
      * @var int
@@ -1291,5 +1305,25 @@ class Product extends AbstractModel
     public function getAdditionalDescriptionFields()
     {
         return $this->additionalDescriptionFields;
+    }
+
+    public function getCountryOfOrigin(): string
+    {
+        return $this->countryOfOrigin;
+    }
+
+    public function setCountryOfOrigin(string $countryOfOrigin): void
+    {
+        $this->countryOfOrigin = $countryOfOrigin;
+    }
+
+    public function getCustomsTariffNumber(): string
+    {
+        return $this->customsTariffNumber;
+    }
+
+    public function setCustomsTariffNumber(string $customsTariffNumber): void
+    {
+        $this->customsTariffNumber = $customsTariffNumber;
     }
 }
